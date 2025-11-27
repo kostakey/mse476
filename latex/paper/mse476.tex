@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper, top=1.25in, bottom=1.25in, left=1in, right=1in]{geometry}
+\usepackage{fancyhdr} % http://ctan.org/pkg/fancyhdr
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage[export]{adjustbox}
+
+% % % % % % % % % % % % 
+% Citation formatting %
+% % % % % % % % % % % % 
+
+\usepackage[style=ieee]{biblatex}
+\addbibresource{sources.bib}
+
+% % % % % % % % %
+% Hyperlinking  %
+% % % % % % % % %
+
+\hypersetup{
+    colorlinks=false, % set true if you want colored links
+    linktoc=all,     % set to all if you want both sections and subsections linked
+    % linkcolor=black,  %c hoose some color if you want links to stand out
+    % citecolor=black
+    % urlcolor=black
+}
+
+% % % % % % % % % % % % % % % %
+% Global title, author, date  %
+% % % % % % % % % % % % % % % %
+
+\title{Ferrous Metals in Electric Motors}
+\author{Kosta Sergakis}
+\date{December 1, 2025}
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\let\rundate\@date
+\makeatother
+
+% % % % % % % % % % %
+% Header and Footer %
+% % % % % % % % % % %
+
+\pagestyle{fancy} % change page style to fancy
+\fancyhf{} % clear header/footer
+\setlength{\headheight}{15pt}
+\fancyhead[L]{Sergakis}
+\fancyhead[C]{\runtitle}
+\fancyhead[R]{\rundate}
+\fancyfoot[C]{\thepage} % \fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt} % default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.4pt} % default \footrulewidth is 0pt
+
+% % % % % % % % % %
+% Paper Beginning %
+% % % % % % % % % %
+
+% \usepackage{natbib}
+\begin{document}
+
+    % % % % % % % %
+    % Title Page  %
+    % % % % % % % %
+    
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{1.5cm}
+            
+            \textbf{Exploring Physical Metallurgy of Ferrous and Aluminum Alloys}
+            
+            \vspace{1cm}
+            
+            An exploration of:\\
+            \vspace{0.25cm}
+            \runtitle
+                
+            \vspace{1cm}
+            
+            \textbf{\runauthor}
+            
+            \vfill  
+            
+            \vspace{1cm}
+
+            \includegraphics[width=0.3\textwidth]{resources/michigan-state-logo-png-transparent.png}
+                
+            Chemical Engineering and Materials Science\\
+            Michigan State University\\
+            East Lansing, Michigan\\
+            \rundate
+                
+        \end{center}
+    
+    \end{titlepage}
+
+
+    % % % % % % % % % % %
+    % Table of Contents %
+    % % % % % % % % % % %
+
+    \setcounter{secnumdepth}{0} % removes section numbers
+    % \maketitle
+    
+    \tableofcontents
+    
+    \newpage
+
+    \section{Introduction}
+        yo whats up
+
+
+
+
+
+
+    % % % % % % % % %
+    % Bibliography  %
+    % % % % % % % % %
+
+    % \addcontentsline{toc}{section}{Works Cited}
+    % \printbibliography
+    \newpage
+    \phantomsection % Create a phantom section to get the correct page number in the ToC
+    \addcontentsline{toc}{section}{Works Cited}
+    \printbibliography[title=Works Cited]
+
+    % \bibliographystyle{plainnat}
+    % \bibliography{sources}
+
+\end{document}

@@ -117,7 +117,7 @@
                 \label{lorentz}
             \end{center}
         
-            Electric motors work by converting electrical energy into mechanical motion using the fundamental principles of electromagnetism. In other words, mechanical rotational energy produced through the interaction of magnetic fields and electric currents. At their core, all motors rely on said principle of electromagnetism: when a current-carrying conductor is placed within a magnetic field, it experiences a force (Lorentz force) \hyperref[lorentz]{[Figure 1]}. Electric motors harness this force to generate continuous torque on a rotating element called the rotor, while stationary components such as the stator create structured magnetic fields that drive rotation.
+            Electric motors work by converting electrical energy into mechanical motion using the fundamental principles of electromagnetism. In other words, the result is mechanical rotational energy produced through the interaction of magnetic fields and electric currents. At their core, all motors rely on said principle of electromagnetism: when a current-carrying conductor is placed within a magnetic field, it experiences a force (Lorentz force) \hyperref[lorentz]{[Figure 1]}. Electric motors harness this force to generate continuous torque on a rotating element called the rotor, while stationary components such as the stator create structured magnetic fields that drive rotation.
             
             \begin{center}
                 \includegraphics[width=0.5\textwidth]{resources/dc commutator.png}
@@ -133,22 +133,122 @@
                 \label{ac}
             \end{center}
 
-            In a typical motor, the stator generates a magnetic field either through permanent magnets or electromagnetism. The rotor carries windings or magnets that interact with this field. By energizing the stator windings in a timed sequence, the magnetic field rotates, pulling the rotor with it. For DC motors, commutators mechanically switch current direction in the rotor to maintain torque \hyperref[commutation]{[Figure 2]}. In AC motors, the stator's alternating current naturally produces a rotating magnetic field, eliminating mechanical commutation \hyperref[ac]{[Figure 3]}.
+            In a typical motor, the stator generates a magnetic field either through permanent magnets or electromagnetism (the specifics depend on the motor type). The rotor carries windings (armature) or magnets that interact with this field. By energizing the stator windings in a timed sequence, the magnetic field rotates, pulling the rotor with it. For DC motors, commutators electronically or mechanically switch current direction in the rotor to maintain torque \hyperref[commutation]{[Figure 2]}. In AC motors, the stator's alternating current naturally produces a rotating magnetic field, eliminating the use of commutation \hyperref[ac]{[Figure 3]}.
+
+            \begin{center}
+                \includegraphics[width=1\textwidth]{resources/ac and dc motor types.png}
+                \\
+                \textbf{Figure 4: Motor Type Hierarchy} \autocite{ma17040848}
+                \label{motor types}
+            \end{center}
+
+            \begin{center}
+                \includegraphics[width=0.8\textwidth]{resources/typical dc and ac motor diagram.png}
+                \\
+                \textbf{Figure 5: Typical DC (a) and AC (b) Motor Diagram} \autocite{ma17040848}
+                \label{motor diagram}
+            \end{center}
+
+            \begin{center}
+                \includegraphics[width=0.48\textwidth]{resources/mechanical commutator.png}
+                \\
+                \textbf{Figure 6: Mechanical Commutation} \autocite{8086122}
+                \label{mechanical commutation}
+            \end{center}
+
+            Although AC and DC motors perform the same function of converting electrical energy into mechanical torque, they differ in power supply, architecture, and control methodology. DC motors operate from direct current sources such as batteries, regulated DC supplies, or rectified AC. Traditional brushed DC motors use wound fields, brushes, and a commutator to switch current mechanically within the rotor windings \hyperref[mechanical commutation]{[Figure 6]}. These components introduce friction and electrical wear, limiting speed capability and reducing lifetime due to brush degredation. 
+
+            AC motors, such as induction and synchronous machines, eliminate the need for brushes. Induction motors, in particular, are valued for their durabiluty, low maintenance, and long operational life. In AC systems, the stator is supplied with alternating currents that inherently create a rotating magnetic field, removing the need for mechanical commutation. The heirarchy in \hyperref[motor types]{Figure 4} provides further clarity on the classification and distinction between motor types. The construction of a typical DC and AC motor is shown in \hyperref[motor diagram]{Figure 5}.
+
+            A key distinction between AC and DC motors lies in speed control. DC motor speed is primarily regulated by adjusting the applied voltage or armature current. In contrast, AC motor speed depends on the frequency of the electrical supply, typically controlled using adjustable-frequency drives (VFDs). While AC motors are rugged and efficient, their control strategies tend to be more complex, especially for applications requiring rapid dynamic response or precise torque output. DC motors, especially at low power levels, remain cost-effective and straightforward to control. 
+
+            \begin{center}
+                \includegraphics[width=0.85\textwidth]{resources/spm vs ipm.png}
+                \\
+                \textbf{Figure 7: Surface Permanent Magnet (SPM) vs. Interior Permanent Magnet (IPM)} \autocite{ma17040848}
+                \label{spm ipm}
+            \end{center}
+
+            In IPM machines, the rotor is made from ferromagnetic steel and is machined with internal slots or cavities that form well-defined flux paths. Permanent magnets are embedded within these slots, commonly in a V-shaped configuration, which concentrates the magnetic flux and increases the effective air-gap flux density relative to SPM machines. This geometry enables stronger torque production and allows the motor to operate more efficiently, often reducing power consumption by up to 30\% compared to equivalent surface-magnet designs \autocite{IPM}. Because the magnets are fully enclosed in the rotor, IPM machines offer improved mechanical robustness at high rotational speeds, as the magnets are protected from centrifugal forces that could otherwise cause delamination or detachment in surface-mounted designs \autocite{IPM}. However, these performance and safety benefits come at the cost of increased manufacturing complexity and higher material and machining expenses.
+            
+            \begin{center}
+                \includegraphics[width=0.8\textwidth]{resources/axial vs radial.png}
+                \\
+                \textbf{Figure 8: Axial Flux vs. Radial Flux Motor Topology} \autocite{Gieras_Wang_Kamper_2008}
+                \label{axial vs radial}
+            \end{center}
+
+            Advances in magnetic materials, manufacturing techniques, and cooling methods have enabled continued increases in electrical machine power density (output power per unit mass volume). However, conventional radial-flux permanent magnet (RFPM) \hyperref[axial vs radial]{[Figure 8]} machines face fundamental structural limitations that constrain further improvement:
+            
+            \begin{enumerate}
+                \item[-] In induction motors, DC commutator machines, and brushless machines with external rotors, the rotor tooth roots limit the achievable magnetic flux, acting as a magnetic bottleneck.
+                \item[-] The rotor yoke material near the shaft contributes little to the magnetic circuit, reducing effective magnetic loading.
+                \item[-] Heat generated by stator windings must conduct through the stator core and frame. Since heat transfer across the air gap, rotor, and shaft is insufficient without forced cooling, thermal performance becomes a limiting factor.
+            \end{enumerate}
+            
+            These constraints are inherent to radial-flux geometries and cannot be easily eliminated without adopting an alternative topology. Axial-flux permanent-magnet (AFPM) machines overcome several of these limitations and are widely recognized for offering higher power density and more compact construction than their radial-flux counterparts.
+
+            Because the inner diameter of an AFPM machine is generally much larger than the shaft diameter, AFPM topologies also facilitate improved ventilation and cooling pathways. Their characteristic features that provide advantages over RFPM machines include the following:
+
+            \begin{enumerate}
+                \item[-] AFPM machines inherently have wider, disk-like geometries, enabling high torque production due to increased air-gap radius.
+                \item[-] The flat air-gap interface can be controlled or modified more easily during design and manufacturing.
+                \item[-] The flux path is shorter and more direct, allowing reductions in core mass while achieving higher electromagnetic loading.
+                \item[-] AFPM machines can be constructed from identical axial modules, allowing straightforward scaling of power or torque by adding or removing modules.
+                \item[-] A larger outer diameter accomodates a higher number of magnetic poles, making AFPM machines particularly suitable for low-speed, high-torque, or high-frequency applications. 
+            \end{enumerate}
 
         \subsection{Applications Across Different Industries}
 
             \begin{center}
                 \includegraphics[width=0.8\textwidth]{resources/power rating for motor types.png}
                 \\
-                \textbf{Figure 4: Power Rating for Motor Types} \autocite{Hughes_2011}
+                \textbf{Figure 9: Power Rating for Motor Types} \autocite{Hughes_2011}
                 \label{powah}
             \end{center}
 
-            \hyperref[powah]{[Figure 4]}
+            Electric motors are foundational to modern industry, enabling mechanical motion across a vast range of sectors due to their efficiency, controllability, and scalability. Different motor architectures such as brushed DC, brushless DC (BLDC), induction motors, and permanent-magnet syunchronous motors (PMSMs) are selected based on performance requirements like torque density, speed range, efficiency, cost, environmental conditions, and reliability. These engineering decisions determine their suitability for specific industrial applications. \hyperref[powah]{Figure 9} shows the typical power ratings for motor topologies, which determines how each gets used.  
+
+            One of the most prominent areas of electric motor deployment is automotive propulsion, particularly in hybrid and electric vehicles. PMSMs with IPMs are widely used due to their high torque density, superior field-weakening performance (increasing motor speed through reducing magnetic field strength), and high efficiency across broad operating speeds. The embedded magnet configuration improves mechanical stability at high RPM and reduces the risk of magnet delamination under centrifugal loads, making IPM motors well suited for traction applications requiring both fast transient response and sustained high-speed operation. The efficiency advantage through IPM motors translates directly into increased driving range and reduced battery load, both critical in EV powertrain design.
+
+            Outside of transportation, electric motors support industrial automation, where accuracy, responsiveness, and reliability are essential. BLDC and synchronous motors are commonly deployed in robotics, CNC machines, conveyors, and various automated manufacturing equipment because they offer precise torque control through advanced electronic commutation. Their ability to maintain exact speed and postion profiles makes them ideal for closed-loop control in high-speed or repetitive operations. Additionally, the absence of brushes in BLDC systems reduces maintenance requirements and improves uptime. That alone is an essential economic consideration in manufacturing.
+
+            In the HVAC and building systems sector, induction motors remain dominant due to their robustness, low cost, and minimal maintenance needs. These motors drive compressors, fans, and pumps in residential, commercial, and industrial environments. Variable-frequency drives (VFDs) paired wih induction motors have enabled significant energy savings by allowing continuous speed modulation, making them an attractive choice for large-scale infrastructure like data centers, hospitals, and comercial cooling systems.
+
+            Electric motors also play a critical role in reneqable energy systems. In wind turbines, permanent-magnet generators (structurally similar to motors but operating as electromechanical energy converters) take advantage of high torque density and low-speed efficiency. In solar energy applciations, motors control trackign systems that adjust panel orientation to maximise solar exposure. These systems prioritize reliability under outdoor conditions and therefore often emplloy sealed BLDC or stepper motors.
+
+            Another significant application area is consumer electronics and appliances, where compact size and efficiency drive design choices. BLDC motors are used in drones, computer cooling fans, hard drives, and household appliances such as washing machines and vacuum cleaners. Their quiet operation, long lifespan, and controllable speed profiles are major advantages over brushed DC motors, which are increasingly limited to cost-sensitive applications like toys or disposable devices.
+
+            Finally, sectors such as aerospace, medical devices, and defense rely on specialized electric machines optimized for extreme conditions. Aerospace actuators, medical pumps, and unmanned systems frequently use high-precision BLDC or PMSM designs that provide smooth, reliable torque without sparking, which is a critical safety requirement in oxygen-rich or explosive environments. Weight reduction, thermal management, and electromagnetic compatibility are primary engineering concerns in these fields.
+
 
     \section{Materials Used in Electric Motors}
-        \subsection{Material Requirements}
+        
+            % \begin{enumerate}
+            %     \item[-] High energy density.
+            %     \item[-] Strong resistance to demagnetization.
+            %     \item[-] Operating temperature - high operating temperatures can reduce magnetic performance, affecting motor reliability.
+            %     \item[-] Cost, high-performance magnets are expensive, prompting research into lower-cost alternatives.
+            %     % such as ferrites for less demanding applications
+            %     \item[-] Motors often operate below full load, where efficiency drops, creating opportunities to improve energy savings and response times. 
+            %     \item[-] In applications like automotive and aviation, achieving high power density while minimizing weight and size remains a critical design challenge.
+            %     \item[-] Long-term durability and seamless integration into complex systems are essential for industrial and transportation uses.  
+            % \end{enumerate}
+
         \subsection{Common Materials}
+            
+            \begin{center}
+                \includegraphics[width=1\textwidth]{resources/material comparison.png}
+                \\
+                \textbf{Figure 10: Magnetic Flux Density - Magnetic Field Strength Comparison for Common Materials} \autocite{ma17040848}
+                \label{material comparison}
+            \end{center}
+
+            
+        
+        % \subsection{Motor Requirements}
+
+
             \subsubsection{Silicon Steels (Electrical Steels)}
             \subsubsection{Soft Magnetic Composites}
             \subsubsection{Cast Iron and Structural Steels}
@@ -157,7 +257,7 @@
             \subsubsection{Effects of Temperature and Processing}
             \subsubsection{Stator and Rotor Fabrication}
         % \subsection{Loss Mechanisms in Electric Steels}
-    \section{Performance Metrics and Evaluation}
+    % \section{Performance Metrics and Evaluation}
     \section{Future Trends and Developments}
     \section{Conclusion}
 

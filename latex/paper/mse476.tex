@@ -223,19 +223,7 @@
 
 
     \section{Materials Used in Electric Motors}
-        
-            % \begin{enumerate}
-            %     \item[-] High energy density.
-            %     \item[-] Strong resistance to demagnetization.
-            %     \item[-] Operating temperature - high operating temperatures can reduce magnetic performance, affecting motor reliability.
-            %     \item[-] Cost, high-performance magnets are expensive, prompting research into lower-cost alternatives.
-            %     % such as ferrites for less demanding applications
-            %     \item[-] Motors often operate below full load, where efficiency drops, creating opportunities to improve energy savings and response times. 
-            %     \item[-] In applications like automotive and aviation, achieving high power density while minimizing weight and size remains a critical design challenge.
-            %     \item[-] Long-term durability and seamless integration into complex systems are essential for industrial and transportation uses.  
-            % \end{enumerate}
-
-        \subsection{Common Materials}
+        \subsection{Introduction to Common Materials}
             
             \begin{center}
                 \includegraphics[width=1\textwidth]{resources/material comparison.png}
@@ -244,21 +232,57 @@
                 \label{material comparison}
             \end{center}
 
+            Electric motors, particularly permanent-magnet motors, require a carefully selected combination of materials to ensure high performance, reliability, and efficiency. At the core, magnetic materials are critical; high-performance permanent magnets such as neodynium-iron-boron (Nd-Fe-B) and samarium-cobalt (Sm-Co) are used for their high energy product (BH) \hyperref[material comparison]{[Figure 10]}, strong resistance to demagnetization, and thermal stability, while ferrites serve as a low-cost alternative for less demanding applications \autocite{ma17040848}. The motor's electromagnetic steel, typically laminated, must have low core losses, high magnetic permeability, and reduced eddy currents to maintain efficiency. Conductive materials like copper or aluminum are used for windings to provide high electrical conductivity, thermal stability, and mechanical strength under vibration and thermal cycling. 
+
+            Structural materials are equally important: motor housings and frames require strength, corrosion resistance, and compatibility with thermal expansion, often achieved through aluminum or steel alloys, while shafts and bearings need high-strength, fatigue-resistance steels for long operational life and smooth rotation. 
             
+            Electrical insulation in the windings and stator laminations must have high dielectric strength, thermal resistance, and chemical stability to prevent breakdown under high temperatures and operational stresses. Effective thermal management is also essential; materials with high thermal conductivity are used in heat sinks and cooling elements to dissipate heat efficiently, particularly in automotive and aerospace applications where weight is critical. Finally, the dependence on rare earth elements such as neodymium, dysprosium, and samarium in high-performance magnets introduces considerations of supply security, environmental impact, and cost, which are central to the sustainability and economic feasibility of motor production. Together, these material requirements ensure that electric motors meet the demanding mechanical, thermal, and electrical performance standards required in applications ranging from electric vehicles to industrial drives and robotics.
+
+        \subsection{Permanent Magnet Characteristics}
+            
+            \begin{center}
+                \includegraphics[width=1\textwidth]{resources/pm characteristics table.png}
+                \\
+                \textbf{Table 1: Characteristics of Typical PM Materials used in Electrical Machines} \autocite{Gieras_2008}
+                \label{pm characteristics}
+            \end{center}
+
+            The BH concept refers to the relationship between magnetic flux density (B) and magnetic field strength (H) in a magnet, typically shown as a B-H curve. This curve illustrates how a magnetic material responds to an applied magnetic field, including how easily it becomes magnetized, how much magnetic energy it can store, and how well it resists demagnetization. A key metric derived from this curve is the maximum energy product, $(BH)_{max}$, which represents the peak value of the product $B \times H$ on the demagnetization curve. This value effectively measures how much magnetic energy a permanent magnet can deliver per unit volume and is therefore a direct indicator of the magnet's strength and usefulness in high-performance applications. Materials like Nd-Fe-B and Sm-Fe-N are prized because their high $(BH)_{max}$ enables compact, lightweight, and efficient motor designs, making the BH concept central to understanding magnet selection and motor performance \hyperref[material comparison]{[Figure 10]}.
+
+            \begin{center}
+                \includegraphics[width=1\textwidth]{resources/hysteresis loop.png}
+                \\
+                \textbf{Figure 11: Hysteresis Loop} \autocite{Sterling}
+                \label{hysteresis}
+            \end{center}
+
+            Remanent flux density, Br, is the magnetic flux density that remains in a magnet after an applied external magnetic field is removed. It represents how strongly the magnet stays magnetized without any external influence. A high Br means the material can maintain a strong magnetic field, which is desireable for motors because it allows high torque and power density. In a hysteresis loop (when the magnetic flux density in the rotor lags behind the magnetizing force, causing the rotor's magnetic poles to be constantly shifting), Br is the point where the magnetization curve crosses the vertical axis (B-axis) after saturation \hyperref[hysteresis]{[Figure 11]}. Essentially, Br represents how strong the magnet is when it is "left alone."
+
+            Coercivity, Hc, is the amount of reverse magnetic field needed to reduce the magnet's flux density to zero after it has been saturated. This describes how resistant the magnet is to being demagnetized. Materials with high Hc can maintain their magnetization even under strong opposing magnetic fields, temperature changes, or load fluctuations. In motors, high coercivity is essential, especially at elevated temperatures, because the magnetic field from the stator can weaken or destabilize the rotor magnet if coercivity is too low.
+
+            Intrinsic coercivity, iHc, is a deeper measure of demagnetization resistance. It is the reverse field required to fully demagnetize the magnet's internal magnetization. In other words, iHc is the applied field strength needed to force the magnet's internal magnetic domains to zero. While Hc indicates when the external flux density crosses zero, iHc describes when the magnetization of the material itself becomes zero. 
         
-        % \subsection{Motor Requirements}
+        \subsection{Permanent Magnet Materials}
 
+            \begin{center}
+                \includegraphics[width=0.5\textwidth]{resources/energy product.png}
+                \\
+                \textbf{Figure 12: Energy Product Between the Maximum Energy Product of Differing Hard Magnetic Materials} \autocite{WIDMER20157}
+                \label{energy product}
+            \end{center}
 
-            \subsubsection{Silicon Steels (Electrical Steels)}
-            \subsubsection{Soft Magnetic Composites}
-            \subsubsection{Cast Iron and Structural Steels}
+        \subsection{Conductive Materials}
+        \subsection{Structural Materials}
+        \subsection{Electrical Insulation}
+        \subsection{Thermal Management}
     \section{Manufacturing of Electric Motors}
         \subsection{Manufacturing Process}
             \subsubsection{Effects of Temperature and Processing}
             \subsubsection{Stator and Rotor Fabrication}
-        % \subsection{Loss Mechanisms in Electric Steels}
-    % \section{Performance Metrics and Evaluation}
     \section{Future Trends and Developments}
+        \subsection{Amorphous Ferromagnetic Alloys}
+        \subsection{Soft Magnetic Powder Composites}
+
     \section{Conclusion}
 
 

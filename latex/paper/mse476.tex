@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage[export]{adjustbox}
+\usepackage{textcomp}
 
 % % % % % % % % % % % % 
 % Citation formatting %
@@ -261,27 +262,95 @@
             Coercivity, Hc, is the amount of reverse magnetic field needed to reduce the magnet's flux density to zero after it has been saturated. This describes how resistant the magnet is to being demagnetized. Materials with high Hc can maintain their magnetization even under strong opposing magnetic fields, temperature changes, or load fluctuations. In motors, high coercivity is essential, especially at elevated temperatures, because the magnetic field from the stator can weaken or destabilize the rotor magnet if coercivity is too low.
 
             Intrinsic coercivity, iHc, is a deeper measure of demagnetization resistance. It is the reverse field required to fully demagnetize the magnet's internal magnetization. In other words, iHc is the applied field strength needed to force the magnet's internal magnetic domains to zero. While Hc indicates when the external flux density crosses zero, iHc describes when the magnetization of the material itself becomes zero. 
+
+            The Curie temperature, Tc, of a material is the temperature above which a ferromagnetic material loses its permanent magnetic properties. Below Tc, the magnetic domains within the material are aligned enough to produce strong, stable magnetization. This is what allows materials to serve as permanent magnets in motors. As temperature rises, thermal energy disrupts the alignment of these domains. When the material reaches the Curie temperature, this disorder becomes so great that the material transitions from ferromagnetic (strong, permanent magnetism) to paramagnetic (weak, non-permanent magnetism). A magnet heated above its Tc cannot retain magnetic flux once cooled unless its remagnitized, and for many other materials the loss is irreversible.
         
         \subsection{Permanent Magnet Materials}
 
             \begin{center}
-                \includegraphics[width=0.5\textwidth]{resources/energy product.png}
+                \includegraphics[width=0.78\textwidth]{resources/anisotropy vs polarization.png}
                 \\
-                \textbf{Figure 12: Energy Product Between the Maximum Energy Product of Differing Hard Magnetic Materials} \autocite{WIDMER20157}
-                \label{energy product}
+                \textbf{Figure 12: Anisotropy vs. Polarization} \autocite{COEY2020119}
+                \label{anisotropy}
             \end{center}
+            
+            \subsubsection{Nb-Fe-B}
+                \begin{center}
+                    \includegraphics[width=0.8\textwidth]{resources/ndfeb crystal structure.png}
+                    \\
+                    \textbf{Figure 13: $Nd_2Fe_{14}B$ Crystal Structure (a) and NdFeB Magnetic Structure Distribution (b)} \autocite{LIANG2024175689}
+                    \label{ndfeb}
+                \end{center}
 
-        \subsection{Conductive Materials}
-        \subsection{Structural Materials}
-        \subsection{Electrical Insulation}
-        \subsection{Thermal Management}
+                \begin{center}
+                    \includegraphics[width=0.5\textwidth]{resources/ndfeb magnetization curve.png}
+                    \\
+                    \textbf{Figure 14: NdFeB Magnetization Curve} \autocite{Ghezelbash2017}
+                    \label{mag curve}
+                \end{center}
+
+                Nd-Fe-B is considered one of the best permanent-magnet materials because its intrinsic crystal chemistry, magnetic properties, and manufacturability align exceptionally well for producing very high-performance magnets. The core reason is the $Nd_2Fe_{14}B$ phase, a stable tetragonal compound that uniquely combines high saturation magnetization, strong magnetocrystalline anisotropy, and a reasonably high Curie temperature \hyperref[anisotropy]{[Figure 12]}. This phase provides a saturation magnetization of 95 emu/g, which is higher than most other rare-earth compound magnets \hyperref[mag curve]{[Figure 14]}. The saturation magnetization is higher than most due to its structure containing alternating Nd-rich layers and Fe-atom sheets that efficiently align and stabilize magnetic moments. Nd contributes large spin-orbit coupling, creating strong anisotropy, while Fe provides high magnetization \autocite{1063214}. 
+
+                \begin{center}
+                    \includegraphics[width=0.6\textwidth]{resources/domain wall pinning.png}
+                    \\
+                    \textbf{Figure 15: Domain Wall Movement (a) and Using Notches to Control Domain Wall Propogation (b)} \autocite{Jin2017}
+                    \label{domain}
+                \end{center}
+
+                \begin{center}
+                    \includegraphics[width=1\textwidth]{resources/sps vs. conventional.png}
+                    \\
+                    \textbf{Figure 16: NdFeB Fracture Surface After Spark Plasma Sintering (a) and After Conventional Powder Metallurgy (b)} \autocite{WANG20141}
+                    \label{sps conv}
+                \end{center}
+
+                Microstructurally, Nd-Fe-B magnets benefit from a multi-phase structure created through sintering or poweder metallurgy: a matrix of $Nd_2Fe_{14}B$ grains surrounded by thin Nd-rich grain-boundary phases \hyperref[ndfeb]{[Figure 13]}. These boundary phases help isolate grains magnetically and promote domain-wall pinning, increasing coersive force \hyperref[domain]{[Figure 15]}. Post-sintering heat treatments further enhance coercivity by reducing strain and improving grain-boundary uniformity \hyperref[sps conv]{[Figure 16]}. Nd-Fe-B is also highly tunable. Substituting small amounts of Dy or Tb into the structure can boost coercivity (thanks to their higher anisotropy), while partial Fe-Co substitution increases the Curie temperature and improves thermal stability of magnetization \autocite{1063214}. This makes the material useful for high-temperature applications, though with some coercivity trade-off. 
+
+                In short, Nd-Fe-B magnets are so effective because their crystal structure naturally supports strong, directionally stable magnetism, and because metallurgical processing allows engineers to optimize coercivity, thermal stability, and microstructure for demanding modern applications.
+            
+            \subsubsection{Sm-Co}
+                
+                \begin{center}
+                    \includegraphics[width=0.7\textwidth]{resources/smco mag.png}
+                    \\
+                    \textbf{Figure 17: $Sm_2Co_{17}$ (S1) and $Sm_2Co_{17}$ with More Fe (S2) Magnetization Curve} \autocite{7114284}
+                    \label{smco mag curve}
+                \end{center}
+
+                Sm-Co magnets, particularly the $Sm_2Co_{17}$-type, are highly regarded among rare-earth magnets due to their exceptional magnetic properties, especially their outstanding high-temperature performance and corrosion resistance. The superior coercivity of these magnets originates primarily from domain wall pinning at the $SmCo_5$ cell boundary phase, which can be tuned by controlling Cu and Fe content during processing \hyperref[domain]{[Figure 15]}. The microstructure typically consists of a rhombohedral $Sm_2Co_{17}$ cell phase, hexagonal $SmCo_5$ boundary phase, and Zr-rich plate-like phases \autocite{7114284}. The Cu distribution at the cell boundaries and interfaces reduces the local magnetic anisotrophy, creating energy wells that serve as strong attractive pinning sites for domain walls, thereby enhancing coercivity. Additionally, variations in Fe content influence the saturation magnetization, with higher Fe content increasing the volume fraction of the cell phase and boosting magnetization but reducing coercivity if the Cu-meditated pinning is less effective \hyperref[smco mag curve]{[Figure 17]}. 
+
+                The microstructure is highly stable even at elevated temperatures, enabling reliable operation well above 250-350\textdegree{}C, which is far beyond Nd-Fe-B's practical range. Sm-Co also possesses much higher Curie temperatures (720-860\textdegree{}C compared to ~310-400\textdegree{}C for Nd-Fe-B), giving it unmatched thermal stability among commercial permanent magnets \autocite{SINGH2015300}.
+
+                \begin{center}
+                    \includegraphics[width=0.85\textwidth]{resources/basal plane fracture.png}
+                    \\
+                    \textbf{Figure 18: Sintered $SmCo_5$ Fractographs in Two Loading Directions} \autocite{SINGH2015300}
+                    \label{smco fract}
+                \end{center}
+
+                The differing appearances in the two loading directions highlight the material's strong crystallographic anisotropy: loading parallel to the basal plane typically produces smoother, mirror-like cleavage, while loading perpendicular results in rougher, faceted features associated with crack deflection at grain boundaries and secondary phases \hyperref[smco fract]{[Figure 18]}.
+
+                Mechanically, both Nd-Fe-B and Sm-Co are brittle, but Sm-Co is generally more fracture-prone due to its strongly anisotropic crystal structure \hyperref[anisotropy]{[Figure 12]}. The above fractograph reflects Sm-Co's crystallographic anisotropy and tendency toward cleavage-dominated failure. Nd-Fe-B's fracture surfaces tend to be less anisotropic and are more influenced by grain-boundary phases introduced through sintering. Sm-Co's brittleness complicates machining and limits its use in extremely high-RPM motors unless encapsulated, though its thermal robustness often outweights these drawbacks.
+                
+                \begin{center}
+                    \includegraphics[width=0.75\textwidth]{resources/cost.png}
+                    \\
+                    \textbf{Figure 19: Correlation of Crustal Abundance of the Elements and their Cost per Mole (a) and a Cost Periodic Table (b) } \autocite{6008648}
+                    \label{cost}
+                \end{center}
+
+                From an application perspective, Nd-Fe-B dominates consumer electronics, EV traction motors, robotics, and most room-temperature industrial systems due to its high energy product and cost efficiency \hyperref[cost]{[Figure 19]}. Sm-Co, while more expensive, is preferred for aerospace, military, high-vacuum, high-radiation, and high-temperature machinery. In summary, Nd-Fe-B offers maximum magnetic strength but limited thermal resilience, whereas Sm-Co provides unmatched temperature stability, corrosion resistance, and magnetic reliability in extreme environments, making the two materials complementary rather than competing solutions within the permanent-magnet landscape.
+
     \section{Manufacturing of Electric Motors}
         \subsection{Manufacturing Process}
             \subsubsection{Effects of Temperature and Processing}
             \subsubsection{Stator and Rotor Fabrication}
     \section{Future Trends and Developments}
         \subsection{Amorphous Ferromagnetic Alloys}
+        \subsection{Sm-Fe-N}
         \subsection{Soft Magnetic Powder Composites}
+        \subsection{Dysprosium Diffusion}
 
     \section{Conclusion}
 

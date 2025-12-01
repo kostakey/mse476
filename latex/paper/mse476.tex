@@ -336,23 +336,60 @@
                 \begin{center}
                     \includegraphics[width=0.75\textwidth]{resources/cost.png}
                     \\
-                    \textbf{Figure 19: Correlation of Crustal Abundance of the Elements and their Cost per Mole (a) and a Cost Periodic Table (b) } \autocite{6008648}
+                    \textbf{Figure 19: Correlation of Crustal Abundance of the Elements and their Cost per Mole (a) and a Cost Periodic Table (b)} \autocite{6008648}
                     \label{cost}
                 \end{center}
 
                 From an application perspective, Nd-Fe-B dominates consumer electronics, EV traction motors, robotics, and most room-temperature industrial systems due to its high energy product and cost efficiency \hyperref[cost]{[Figure 19]}. Sm-Co, while more expensive, is preferred for aerospace, military, high-vacuum, high-radiation, and high-temperature machinery. In summary, Nd-Fe-B offers maximum magnetic strength but limited thermal resilience, whereas Sm-Co provides unmatched temperature stability, corrosion resistance, and magnetic reliability in extreme environments, making the two materials complementary rather than competing solutions within the permanent-magnet landscape.
 
     \section{Manufacturing of Electric Motors}
-        \subsection{Manufacturing Process}
-            \subsubsection{Effects of Temperature and Processing}
-            \subsubsection{Stator and Rotor Fabrication}
-    \section{Future Trends and Developments}
-        \subsection{Amorphous Ferromagnetic Alloys}
-        \subsection{Sm-Fe-N}
-        \subsection{Soft Magnetic Powder Composites}
-        \subsection{Dysprosium Diffusion}
+        
+        \begin{center}
+                \includegraphics[width=1\textwidth]{resources/conventional vs hd.png}
+                \\
+                \textbf{Figure 20: Conventional Sintered Process and Hot-Press and Hot-Deformation Process} \autocite{ma16134789}
+                \label{sint vs hddr}
+        \end{center}
+
+        \begin{center}
+                \includegraphics[width=1\textwidth]{resources/mfg effects.png}
+                \\
+                \textbf{Figure 21: Coercivity vs. Grain Size (a), Typical Microstructural Features of Sintered Nd-Fe-B Magnets (b), HDDR Nd-Fe-B Powders (c), and Melt-Spun Nd-Fe-B Ribbons (d)} \autocite{ma16134789}
+                \label{coerc vs grains}
+        \end{center}
+
+        \subsection{Effects of Hot Deformation}
+            
+            \begin{center}
+                \includegraphics[width=0.85\textwidth]{resources/mfg process.png}
+                \\
+                \textbf{Figure 22: Production Process of Radially Oriented Ring Magnet and Axially Oriented Plate Magnet} \autocite{ma16196581}
+                \label{mfg}
+            \end{center}
+
+            Hot-deformed Nd-Fe-B magnets are produced by melt-spinning nanocrystalline ribbons, pulverizing them into powder, hot-pressing to full density, and then hot-deforming to indice strong crystallographic texture and platelet grain orientation, yielding a fine-grained, high-performance magnet whose microstructure and domain behavior are controlled by temperature, composition, and grain-boundary engineering \hyperref[mfg]{[Figure 22]}. 
+
+            Hot deformation dramatically reshapes the grain structure and microstructure of Nd-Fe-B magnets, transforming them from an initially random, nanocrystalline state into a highly textured and anisotropic final structure. The process begins with melt spinning, which produces extremely fine 10-30nm $Nd_2Fe_{14}B$ grains that are randomly oriented due to rapid quenching. Pulverizing these ribbons into powder preserves this nanocrystalline structure while ensuring a slight excess of Nd-rich phases that will later form a liquid grain boundary. During hot pressing, the powder densifies fully and the grains coarsen slightly to about 20-50nm, but the compact remains isotropic; the Nd-rich liquid phase distributes into a continuous grain boundary network that is essential for later grain movement. The most significant microstructural changes occur during hot deformation, where mechanical strain combined with the softened boundary phase allows grains to rotate, slide, and elongate. As a result, the originally equiaxed nanograins transform into plate-like grains with large aspect ratios. Typically, the ratios lie between 200-500nm laterally and 20-50nm thick \autocite{ma16196581}. These platelets develop strong crystallographic texture as their c-axes align along the compression direction. The grain boundary phase also reorganizes, forming thin, well-connected layers that promote domain-wall pinning \hyperref[domain]{[Figure 15]}. When properly controlled, the deformation step maintains the nanoscale grain size, preventing abnormal grain growth while enhancing alignment. The final microstructure therefore consists of highly oriented, plate-like $Nd_2Fe_{14}B$ grains embedded in a continuous Nd-rich boundary network, producing a magnet with strong anisotropy, high remanence, and improved coercivity compared to conventional sintered magnets.
+
+            Sintered Nd-Fe-B magnets dominate the market due to their mature manufacturing processes and excellent performance, though they require significant amounts of expensive heavy rare-earth (HRE) elements, such as dysprosium or terbium, to maintain coercivity at elevated temperatures above 150\textdegree{}C. 
+        
+        \subsection{Effects of Sintering}
+
+            Sintered Nd-Fe-B magnets are produced from rare-earth (RE) metals, iron, cobalt, ferro-boron, and recycled alloy, starting with vacuum or argon induction melting to minimize oxygen contamination \autocite{Cui2022}. The microstructure of the cast alloy is critical, as the main magnetic phase, $Nd_2Fe_{14}B$, forms via a peritectic reaction with c-Fe. Slow cooling can leave soft, ductile a-Fe and secondary phases, reducing magnetic performance and complicating powder production. Rapid cooling via strip casting suppresses a-Fe formation, produces thin sheets (<1mm), and enables higher remanence.
+
+            The strip-cast flakes undergo hydrogen decrepitation, creating microcracks that embrittle the material, followed by jet milling to produce a signle-crystal powder (about 5µm) with uniform particle size. The powder is pressed under a magnetic field, aligning grains for anisotropic properties.
+
+            Sintering occurs under vacuum or inert gas, densifying the magnet (>98\% theoretical density) while controlling grain growth. Subsequent isothermal heat treatment optimizes coercivity and B-H loop shape. Pressed magnets shrink anisotropically (7-25\%), necessitating machining (wire EDM, grinding, or vibratory honing) to achieve precise dimensions and reduce chipping \autocite{Cui2022}.
+
+            Nd-Fe-B magnets require thin corrosion-resistant coatings to prevent degredation, and are magnetized post-processing. To improve high-temperature performance, heavy rare-earth (Dy, Tb) diffusion or additions are used to maintain coercivity above 150\textdegree{}C.
 
     \section{Conclusion}
+        
+        Electric motors rely critically on the selection of materials and the precision of manufacturing processes to achieve high performance, efficiency, and reliability. Permanent magnets, particularly Nd-Fe-B and Sm-Co, play a central role in enhancing motor power density and torque characteristics due to their strong magnetic properties. Nd-Fe-B magnets offer high remanence and energy density but require careful microstructural control through processes such as strip casting, hydrogen decrepitation, sintering, and heat treatment to optimize coercivity and alignment. Sm-Co magnets, while less sensitive to temperature, provide excellent thermal stability and corrosion resistance.
+
+        Manufacturing techniques, including hot deformation for Nd-Fe-B and sintering for both magnet types, directly influence grain orientation, texture, and the formation of grain-boundary phases, which in turn determine magnetic performance. Additionally, machining, coating, and magnetization steps are critical for producing magnets suitable for practical applications across industries ranging from automotive to renewable energy. 
+
+        Overall, the combination of advanced materials, microstructural engineering, and precise manufacturing processes enables electric motors to meet increasingly demanding performance requirements, supporting the growing adoption of electrification in modern technology.
 
 
     % % % % % % % % %

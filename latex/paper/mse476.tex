@@ -112,284 +112,244 @@
             
             \begin{center}
                 \vspace{0.5cm}
-                \includegraphics[width=0.5\textwidth]{resources/lorentz force.png}
+                \includegraphics[width=0.35\textwidth]{resources/lorentz force.png}
                 \\
                 \textbf{Figure 1: Lorentz Force} \autocite{Hughes_2011}
                 \label{lorentz}
             \end{center}
         
-            Electric motors work by converting electrical energy into mechanical motion using the fundamental principles of electromagnetism. In other words, the result is mechanical rotational energy produced through the interaction of magnetic fields and electric currents. At their core, all motors rely on said principle of electromagnetism: when a current-carrying conductor is placed within a magnetic field, it experiences a force (Lorentz force) \hyperref[lorentz]{[Figure 1]}. Electric motors harness this force to generate continuous torque on a rotating element called the rotor, while stationary components such as the stator create structured magnetic fields that drive rotation.
+            Electric motors convert electrical energy into mechanical rotation through the interaction of magnetic fields and electric currents. When a current-carrying conductor is placed in a magnetic field, it experiences a Lorentz force, which motors harness to produce torque on a rotating rotor. \hyperref[lorentz]{[Figure 1]}. The stator provides a structured magnetic field, either through permanent magnets or electromagnetically energized windings, that drives rotor motion.
             
             \begin{center}
-                \includegraphics[width=0.5\textwidth]{resources/dc commutator.png}
+                \includegraphics[width=0.3\textwidth]{resources/dc commutator.png}
                 \\
                 \textbf{Figure 2: DC Motor Commutation} \autocite{5562688}
                 \label{commutation}
             \end{center}
 
             \begin{center}
-                \includegraphics[width=0.5\textwidth]{resources/ac motor.png}
+                \includegraphics[width=0.4\textwidth]{resources/ac motor.png}
                 \\
                 \textbf{Figure 3: AC Motor Rotating Magnetic Field} \autocite{Hughes_2011}
                 \label{ac}
             \end{center}
 
-            In a typical motor, the stator generates a magnetic field either through permanent magnets or electromagnetism (the specifics depend on the motor type). The rotor carries windings (armature) or magnets that interact with this field. By energizing the stator windings in a timed sequence, the magnetic field rotates, pulling the rotor with it. For DC motors, commutators electronically or mechanically switch current direction in the rotor to maintain torque \hyperref[commutation]{[Figure 2]}. In AC motors, the stator's alternating current naturally produces a rotating magnetic field, eliminating the use of commutation \hyperref[ac]{[Figure 3]}.
-
             \begin{center}
-                \includegraphics[width=1\textwidth]{resources/ac and dc motor types.png}
+                \includegraphics[width=0.85\textwidth]{resources/ac and dc motor types.png}
                 \\
                 \textbf{Figure 4: Motor Type Hierarchy} \autocite{ma17040848}
                 \label{motor types}
             \end{center}
 
-            \begin{center}
-                \includegraphics[width=0.8\textwidth]{resources/typical dc and ac motor diagram.png}
-                \\
-                \textbf{Figure 5: Typical DC (a) and AC (b) Motor Diagram} \autocite{ma17040848}
-                \label{motor diagram}
-            \end{center}
+            % \begin{center}
+            %     \includegraphics[width=0.45\textwidth]{resources/mechanical commutator.png}
+            %     \\
+            %     \textbf{Figure 5: Mechanical Commutation} \autocite{8086122}
+            %     \label{mechanical commutation}
+            % \end{center}
 
-            \begin{center}
-                \includegraphics[width=0.48\textwidth]{resources/mechanical commutator.png}
-                \\
-                \textbf{Figure 6: Mechanical Commutation} \autocite{8086122}
-                \label{mechanical commutation}
-            \end{center}
+            In DC motors, commutators mechanically or electronically switch current direction in the rotor windings to maintain torque \hyperref[commutation]{[Figure 2]}. AC motors rely on alternating currents that naturally generate a rotating magnetic field in the stator, eliminating the need for brushes \hyperref[ac]{[Figure 3]}. As a result, DC machines offer simple speed control and low-cost operation, while AC machines provide higher durability, reduced maintenance, and better long-term reliability. Brushed DC architectures suffer from brush wear and friction, limiting speed capability, whereas AC induction and synchronous machines avoid these issues entirely. \hyperref[motor types]{Figure 4} shows the relationship between various motor types. 
+            
+            Speed regulation differs significantly between the two classes: DC motor speed is controlled by adjusting voltage or armature current, while AC motor speed is set by supply frequency using variable-frequency drives (VFDs). Although AC control is more complex, it provides greater efficiency and robustness in industrial systems.
 
-            Although AC and DC motors perform the same function of converting electrical energy into mechanical torque, they differ in power supply, architecture, and control methodology. DC motors operate from direct current sources such as batteries, regulated DC supplies, or rectified AC. Traditional brushed DC motors use wound fields, brushes, and a commutator to switch current mechanically within the rotor windings \hyperref[mechanical commutation]{[Figure 6]}. These components introduce friction and electrical wear, limiting speed capability and reducing lifetime due to brush degredation. 
-
-            AC motors, such as induction and synchronous machines, eliminate the need for brushes. Induction motors, in particular, are valued for their durabiluty, low maintenance, and long operational life. In AC systems, the stator is supplied with alternating currents that inherently create a rotating magnetic field, removing the need for mechanical commutation. The heirarchy in \hyperref[motor types]{Figure 4} provides further clarity on the classification and distinction between motor types. The construction of a typical DC and AC motor is shown in \hyperref[motor diagram]{Figure 5}.
-
-            A key distinction between AC and DC motors lies in speed control. DC motor speed is primarily regulated by adjusting the applied voltage or armature current. In contrast, AC motor speed depends on the frequency of the electrical supply, typically controlled using adjustable-frequency drives (VFDs). While AC motors are rugged and efficient, their control strategies tend to be more complex, especially for applications requiring rapid dynamic response or precise torque output. DC motors, especially at low power levels, remain cost-effective and straightforward to control. 
+            % \begin{center}
+            %     \includegraphics[width=0.7\textwidth]{resources/typical dc and ac motor diagram.png}
+            %     \\
+            %     \textbf{Figure 5: Typical DC (a) and AC (b) Motor Diagram} \autocite{ma17040848}
+            %     \label{motor diagram}
+            % \end{center}
 
             \begin{center}
                 \includegraphics[width=0.85\textwidth]{resources/spm vs ipm.png}
                 \\
-                \textbf{Figure 7: Surface Permanent Magnet (SPM) vs. Interior Permanent Magnet (IPM)} \autocite{ma17040848}
+                \textbf{Figure 5: Surface Permanent Magnet (SPM) vs. Interior Permanent Magnet (IPM)} \autocite{ma17040848}
                 \label{spm ipm}
             \end{center}
 
-            In IPM machines, the rotor is made from ferromagnetic steel and is machined with internal slots or cavities that form well-defined flux paths. Permanent magnets are embedded within these slots, commonly in a V-shaped configuration, which concentrates the magnetic flux and increases the effective air-gap flux density relative to SPM machines. This geometry enables stronger torque production and allows the motor to operate more efficiently, often reducing power consumption by up to 30\% compared to equivalent surface-magnet designs \autocite{IPM}. Because the magnets are fully enclosed in the rotor, IPM machines offer improved mechanical robustness at high rotational speeds, as the magnets are protected from centrifugal forces that could otherwise cause delamination or detachment in surface-mounted designs \autocite{IPM}. However, these performance and safety benefits come at the cost of increased manufacturing complexity and higher material and machining expenses.
-            
             \begin{center}
-                \includegraphics[width=0.8\textwidth]{resources/axial vs radial.png}
+                \includegraphics[width=0.7\textwidth]{resources/axial vs radial.png}
                 \\
-                \textbf{Figure 8: Axial Flux vs. Radial Flux Motor Topology} \autocite{Gieras_Wang_Kamper_2008}
+                \textbf{Figure 6: Axial Flux vs. Radial Flux Motor Topology} \autocite{Gieras_Wang_Kamper_2008}
                 \label{axial vs radial}
             \end{center}
 
-            Advances in magnetic materials, manufacturing techniques, and cooling methods have enabled continued increases in electrical machine power density (output power per unit mass volume). However, conventional radial-flux permanent magnet (RFPM) \hyperref[axial vs radial]{[Figure 8]} machines face fundamental structural limitations that constrain further improvement:
-            
-            \begin{enumerate}
-                \item[-] In induction motors, DC commutator machines, and brushless machines with external rotors, the rotor tooth roots limit the achievable magnetic flux, acting as a magnetic bottleneck.
-                \item[-] The rotor yoke material near the shaft contributes little to the magnetic circuit, reducing effective magnetic loading.
-                \item[-] Heat generated by stator windings must conduct through the stator core and frame. Since heat transfer across the air gap, rotor, and shaft is insufficient without forced cooling, thermal performance becomes a limiting factor.
-            \end{enumerate}
-            
-            These constraints are inherent to radial-flux geometries and cannot be easily eliminated without adopting an alternative topology. Axial-flux permanent-magnet (AFPM) machines overcome several of these limitations and are widely recognized for offering higher power density and more compact construction than their radial-flux counterparts.
+            Among modern AC motor types, Interior Permanent Magnet (IPM) machines embed magnets within the rotor structure \hyperref[spm ipm]{[Figure 5]}. This geometry enhances air-gap flux density, increases torque production, improves high-speed mechanical strength, and can reduce energy consumption by roughly 30\% compared to surface-mounted permanent magnet (SPM) machines \autocite{ma17040848}. These benefits come with the tradeoff of higher manufacturing complexity and cost.
 
-            Because the inner diameter of an AFPM machine is generally much larger than the shaft diameter, AFPM topologies also facilitate improved ventilation and cooling pathways. Their characteristic features that provide advantages over RFPM machines include the following:
-
-            \begin{enumerate}
-                \item[-] AFPM machines inherently have wider, disk-like geometries, enabling high torque production due to increased air-gap radius.
-                \item[-] The flat air-gap interface can be controlled or modified more easily during design and manufacturing.
-                \item[-] The flux path is shorter and more direct, allowing reductions in core mass while achieving higher electromagnetic loading.
-                \item[-] AFPM machines can be constructed from identical axial modules, allowing straightforward scaling of power or torque by adding or removing modules.
-                \item[-] A larger outer diameter accomodates a higher number of magnetic poles, making AFPM machines particularly suitable for low-speed, high-torque, or high-frequency applications. 
-            \end{enumerate}
+            Axial-flux permanent-magnet (AFPM) motors offer further advantages over traditional radial-flux machines, including higher power density, compact form factor, and improved cooling due to larger inner diameters \hyperref[axial vs radial]{[Figure 6]}. Advances in magnetic materials and thermal design have allowed AFPM topologies to exceed the power density limitations of conventional radial-flux architectures.
 
         \subsection{Applications Across Different Industries}
 
             \begin{center}
-                \includegraphics[width=0.8\textwidth]{resources/power rating for motor types.png}
+                \includegraphics[width=0.65\textwidth]{resources/power rating for motor types.png}
                 \\
-                \textbf{Figure 9: Power Rating for Motor Types} \autocite{Hughes_2011}
+                \textbf{Figure 7: Power Rating for Motor Types} \autocite{Hughes_2011}
                 \label{powah}
             \end{center}
 
-            Electric motors are foundational to modern industry, enabling mechanical motion across a vast range of sectors due to their efficiency, controllability, and scalability. Different motor architectures such as brushed DC, brushless DC (BLDC), induction motors, and permanent-magnet syunchronous motors (PMSMs) are selected based on performance requirements like torque density, speed range, efficiency, cost, environmental conditions, and reliability. These engineering decisions determine their suitability for specific industrial applications. \hyperref[powah]{Figure 9} shows the typical power ratings for motor topologies, which determines how each gets used.  
+            Different motor types such as brushed DC, BLDC, induction motors, and PMSMs, are selected based on required torque density, efficiency, speed range, cost, and environmental durability. Typical power ranges for these machines are shown in \hyperref[powah]{Figure 7}.  
 
-            One of the most prominent areas of electric motor deployment is automotive propulsion, particularly in hybrid and electric vehicles. PMSMs with IPMs are widely used due to their high torque density, superior field-weakening performance (increasing motor speed through reducing magnetic field strength), and high efficiency across broad operating speeds. The embedded magnet configuration improves mechanical stability at high RPM and reduces the risk of magnet delamination under centrifugal loads, making IPM motors well suited for traction applications requiring both fast transient response and sustained high-speed operation. The efficiency advantage through IPM motors translates directly into increased driving range and reduced battery load, both critical in EV powertrain design.
+            In automotive electrification, PMSMs with IPM rotors are more common due to their high torque density, excellent field-weakening capability for high-speed operation, and greater efficiency. Their embedded magnet design provides mechanical robustness at high RPM, improving EV range and performance. 
 
-            Outside of transportation, electric motors support industrial automation, where accuracy, responsiveness, and reliability are essential. BLDC and synchronous motors are commonly deployed in robotics, CNC machines, conveyors, and various automated manufacturing equipment because they offer precise torque control through advanced electronic commutation. Their ability to maintain exact speed and postion profiles makes them ideal for closed-loop control in high-speed or repetitive operations. Additionally, the absence of brushes in BLDC systems reduces maintenance requirements and improves uptime. That alone is an essential economic consideration in manufacturing.
+            Industrial automation relies heavily on BLDC and synchronous machines for their torque control, fast dynamic response, and low maintenance, making them ideal for robotics, CNC equipment, and conveyor systems. Induction motors remain the staple of HVAC and building systems due to their low cost, rugged construction, and compatibility with VFD-based energy-efficient speed control.
 
-            In the HVAC and building systems sector, induction motors remain dominant due to their robustness, low cost, and minimal maintenance needs. These motors drive compressors, fans, and pumps in residential, commercial, and industrial environments. Variable-frequency drives (VFDs) paired wih induction motors have enabled significant energy savings by allowing continuous speed modulation, making them an attractive choice for large-scale infrastructure like data centers, hospitals, and comercial cooling systems.
+            In renewable energy, permanent-magnet generators in wind turbines benefit from high torque at low rotational speeds. Solar tracking systems frequently use sealed BLDC or stepper motors for reliable outdoor operation. Consumer devices, from drones and cooling fans to home appliances, increasingly use compact BLDC motors for their quiet operation and efficiency.
 
-            Electric motors also play a critical role in reneqable energy systems. In wind turbines, permanent-magnet generators (structurally similar to motors but operating as electromechanical energy converters) take advantage of high torque density and low-speed efficiency. In solar energy applciations, motors control trackign systems that adjust panel orientation to maximise solar exposure. These systems prioritize reliability under outdoor conditions and therefore often emplloy sealed BLDC or stepper motors.
-
-            Another significant application area is consumer electronics and appliances, where compact size and efficiency drive design choices. BLDC motors are used in drones, computer cooling fans, hard drives, and household appliances such as washing machines and vacuum cleaners. Their quiet operation, long lifespan, and controllable speed profiles are major advantages over brushed DC motors, which are increasingly limited to cost-sensitive applications like toys or disposable devices.
-
-            Finally, sectors such as aerospace, medical devices, and defense rely on specialized electric machines optimized for extreme conditions. Aerospace actuators, medical pumps, and unmanned systems frequently use high-precision BLDC or PMSM designs that provide smooth, reliable torque without sparking, which is a critical safety requirement in oxygen-rich or explosive environments. Weight reduction, thermal management, and electromagnetic compatibility are primary engineering concerns in these fields.
-
+            Aerospace, medical, and defense sectors employ specialized BLDC and PMSM machines designed for high reliability, minimal electromagnetic interference, and operation in extreme environments. Weight, thermal management, and safety constraints drive highly optimized motor designs in these applications.
 
     \section{Materials Used in Electric Motors}
         \subsection{Introduction to Common Materials}
             
             \begin{center}
-                \includegraphics[width=1\textwidth]{resources/material comparison.png}
+                \includegraphics[width=0.65\textwidth]{resources/material comparison.png}
                 \\
-                \textbf{Figure 10: Magnetic Flux Density - Magnetic Field Strength Comparison for Common Materials} \autocite{ma17040848}
+                \textbf{Figure 8: Magnetic Flux Density - Magnetic Field Strength Comparison for Common Materials} \autocite{ma17040848}
                 \label{material comparison}
             \end{center}
 
-            Electric motors, particularly permanent-magnet motors, require a carefully selected combination of materials to ensure high performance, reliability, and efficiency. At the core, magnetic materials are critical; high-performance permanent magnets such as neodynium-iron-boron (Nd-Fe-B) and samarium-cobalt (Sm-Co) are used for their high energy product (BH) \hyperref[material comparison]{[Figure 10]}, strong resistance to demagnetization, and thermal stability, while ferrites serve as a low-cost alternative for less demanding applications \autocite{ma17040848}. The motor's electromagnetic steel, typically laminated, must have low core losses, high magnetic permeability, and reduced eddy currents to maintain efficiency. Conductive materials like copper or aluminum are used for windings to provide high electrical conductivity, thermal stability, and mechanical strength under vibration and thermal cycling. 
+            Electric motors, particularly permanent-magnet motors, require a carefully selected combination of materials to ensure high performance, reliability, and efficiency. At the core, magnetic materials are critical; high-performance permanent magnets such as neodynium-iron-boron (Nd-Fe-B) and samarium-cobalt (Sm-Co) are used for their high energy product (BH), strong resistance to demagnetization, and thermal stability, while ferrites serve as a low-cost alternative for less demanding applications \hyperref[material comparison]{[Figure 8]} \autocite{ma17040848}. The motor's electromagnetic steel (typically laminated) must have low core losses, high magnetic permeability, and reduced eddy currents to maintain efficiency. Conductive materials like copper or aluminum are used for windings to provide high electrical conductivity, thermal stability, and mechanical strength under vibration and thermal cycling. 
 
-            Structural materials are equally important: motor housings and frames require strength, corrosion resistance, and compatibility with thermal expansion, often achieved through aluminum or steel alloys, while shafts and bearings need high-strength, fatigue-resistance steels for long operational life and smooth rotation. 
+            Structural materials are equally important: motor housings and frames require strength, corrosion resistance, and compatibility with thermal expansion, often achieved through aluminum or steel alloys, while shafts and bearings need high-strength, fatigue-resistant steels for long operational life and smooth rotation. 
             
             Electrical insulation in the windings and stator laminations must have high dielectric strength, thermal resistance, and chemical stability to prevent breakdown under high temperatures and operational stresses. Effective thermal management is also essential; materials with high thermal conductivity are used in heat sinks and cooling elements to dissipate heat efficiently, particularly in automotive and aerospace applications where weight is critical. Finally, the dependence on rare earth elements such as neodymium, dysprosium, and samarium in high-performance magnets introduces considerations of supply security, environmental impact, and cost, which are central to the sustainability and economic feasibility of motor production. Together, these material requirements ensure that electric motors meet the demanding mechanical, thermal, and electrical performance standards required in applications ranging from electric vehicles to industrial drives and robotics.
 
         \subsection{Permanent Magnet Characteristics}
-            
-            \begin{center}
-                \includegraphics[width=1\textwidth]{resources/pm characteristics table.png}
-                \\
-                \textbf{Table 1: Characteristics of Typical PM Materials used in Electrical Machines} \autocite{Gieras_2008}
-                \label{pm characteristics}
-            \end{center}
 
-            The BH concept refers to the relationship between magnetic flux density (B) and magnetic field strength (H) in a magnet, typically shown as a B-H curve. This curve illustrates how a magnetic material responds to an applied magnetic field, including how easily it becomes magnetized, how much magnetic energy it can store, and how well it resists demagnetization. A key metric derived from this curve is the maximum energy product, $(BH)_{max}$, which represents the peak value of the product $B \times H$ on the demagnetization curve. This value effectively measures how much magnetic energy a permanent magnet can deliver per unit volume and is therefore a direct indicator of the magnet's strength and usefulness in high-performance applications. Materials like Nd-Fe-B and Sm-Fe-N are prized because their high $(BH)_{max}$ enables compact, lightweight, and efficient motor designs, making the BH concept central to understanding magnet selection and motor performance \hyperref[material comparison]{[Figure 10]}.
+            The BH concept refers to the relationship between magnetic flux density (B) and magnetic field strength (H) in a magnet, typically shown as a B-H curve. This curve illustrates how a magnetic material responds to an applied magnetic field, including how easily it becomes magnetized, how much magnetic energy it can store, and how well it resists demagnetization. A key metric derived from this curve is the maximum energy product, $(BH)_{max}$, which represents the peak value of the product, $B \times H$, on the demagnetization curve. This value effectively measures how much magnetic energy a permanent magnet can deliver per unit volume and is therefore a direct indicator of the magnet's strength. Materials like Nd-Fe-B and Sm-Fe-N are prized because their high $(BH)_{max}$ enables compact, lightweight, and efficient motor designs, making the BH concept central to understanding magnet selection and motor performance \hyperref[material comparison]{[Figure 8]}.
 
             \begin{center}
-                \includegraphics[width=1\textwidth]{resources/hysteresis loop.png}
+                \includegraphics[width=0.8\textwidth]{resources/hysteresis loop.png}
                 \\
-                \textbf{Figure 11: Hysteresis Loop} \autocite{Sterling}
+                \textbf{Figure 9: Hysteresis Loop} \autocite{Sterling}
                 \label{hysteresis}
             \end{center}
 
-            Remanent flux density, Br, is the magnetic flux density that remains in a magnet after an applied external magnetic field is removed. It represents how strongly the magnet stays magnetized without any external influence. A high Br means the material can maintain a strong magnetic field, which is desireable for motors because it allows high torque and power density. In a hysteresis loop (when the magnetic flux density in the rotor lags behind the magnetizing force, causing the rotor's magnetic poles to be constantly shifting), Br is the point where the magnetization curve crosses the vertical axis (B-axis) after saturation \hyperref[hysteresis]{[Figure 11]}. Essentially, Br represents how strong the magnet is when it is "left alone."
+            Remanent flux density, Br, is the magnetic flux density that remains in a magnet after an applied external magnetic field is removed. It represents how strongly the magnet stays magnetized without any external influence. A high Br means the material can maintain a strong magnetic field, which is desirable for motors because it allows high torque and power density. In a hysteresis loop (when the magnetic flux density in the rotor lags behind the magnetizing force, causing the rotor's magnetic poles to be constantly shifting), Br is the point where the magnetization curve crosses the vertical axis (B-axis) after saturation \hyperref[hysteresis]{[Figure 9]}. Essentially, Br represents how strong the magnet is when it is "left alone."
 
-            Coercivity, Hc, is the amount of reverse magnetic field needed to reduce the magnet's flux density to zero after it has been saturated. This describes how resistant the magnet is to being demagnetized. Materials with high Hc can maintain their magnetization even under strong opposing magnetic fields, temperature changes, or load fluctuations. In motors, high coercivity is essential, especially at elevated temperatures, because the magnetic field from the stator can weaken or destabilize the rotor magnet if coercivity is too low.
+            Coercivity, Hc, is the amount of reverse magnetic field needed to reduce the magnet's flux density to zero after it has been saturated. This describes how resistant the magnet is to being demagnetized. Materials with high Hc can maintain their magnetization even under strong opposing magnetic fields, temperature changes, or load fluctuations. In motors, high coercivity is desirable, especially at elevated temperatures, because the magnetic field from the stator can weaken or destabilize the rotor magnet if coercivity is too low.
 
             Intrinsic coercivity, iHc, is a deeper measure of demagnetization resistance. It is the reverse field required to fully demagnetize the magnet's internal magnetization. In other words, iHc is the applied field strength needed to force the magnet's internal magnetic domains to zero. While Hc indicates when the external flux density crosses zero, iHc describes when the magnetization of the material itself becomes zero. 
 
-            The Curie temperature, Tc, of a material is the temperature above which a ferromagnetic material loses its permanent magnetic properties. Below Tc, the magnetic domains within the material are aligned enough to produce strong, stable magnetization. This is what allows materials to serve as permanent magnets in motors. As temperature rises, thermal energy disrupts the alignment of these domains. When the material reaches the Curie temperature, this disorder becomes so great that the material transitions from ferromagnetic (strong, permanent magnetism) to paramagnetic (weak, non-permanent magnetism). A magnet heated above its Tc cannot retain magnetic flux once cooled unless its remagnitized, and for many other materials the loss is irreversible.
+            The Curie temperature, Tc, of a material is the temperature above which a ferromagnetic material loses its permanent magnetic properties. Below Tc, the magnetic domains within the material are aligned enough to produce strong, stable magnetization. This is what allows materials to serve as permanent magnets in motors. As the temperature rises, thermal energy disrupts the alignment of these domains. When the material reaches the Curie temperature, this disorder becomes so great that the material transitions from ferromagnetic (strong, permanent magnetism) to paramagnetic (weak, non-permanent magnetism). A magnet heated above its Tc cannot retain magnetic flux once cooled unless its remagnitized, and for many materials the loss is irreversible.
         
         \subsection{Permanent Magnet Materials}
 
             \begin{center}
                 \includegraphics[width=0.78\textwidth]{resources/anisotropy vs polarization.png}
                 \\
-                \textbf{Figure 12: Anisotropy vs. Polarization} \autocite{COEY2020119}
+                \textbf{Figure 10: Anisotropy vs. Polarization} \autocite{COEY2020119}
                 \label{anisotropy}
             \end{center}
             
             \subsubsection{Nb-Fe-B}
+
+                \begin{center}
+                    \includegraphics[width=0.55\textwidth]{resources/ndfeb magnetization curve.png}
+                    \\
+                    \textbf{Figure 11: NdFeB Magnetization Curve} \autocite{Ghezelbash2017}
+                    \label{mag curve}
+                \end{center}
+
+                Nd-Fe-B is considered one of the best permanent-magnet materials because its intrinsic crystal chemistry, magnetic properties, and manufacturability align exceptionally well for producing very high-performance magnets. The main reason is due to the $Nd_2Fe_{14}B$ phase, a stable tetragonal compound that uniquely combines high saturation magnetization, strong magnetocrystalline anisotropy, and a reasonably high Curie temperature \hyperref[anisotropy]{[Figure 10]}. This phase provides a saturation magnetization of 95 emu/g, which is higher than most other rare-earth compound magnets \hyperref[mag curve]{[Figure 11]}. The saturation magnetization is higher than most due to its structure containing alternating Nd-rich layers and Fe-atom sheets that efficiently align and stabilize magnetic moments. Nd contributes large spin-orbit coupling, creating strong anisotropy, while Fe provides high magnetization \autocite{1063214}. 
+
                 \begin{center}
                     \includegraphics[width=0.8\textwidth]{resources/ndfeb crystal structure.png}
                     \\
-                    \textbf{Figure 13: $Nd_2Fe_{14}B$ Crystal Structure (a) and NdFeB Magnetic Structure Distribution (b)} \autocite{LIANG2024175689}
+                    \textbf{Figure 12: $Nd_2Fe_{14}B$ Crystal Structure (a) and NdFeB Magnetic Structure Distribution (b)} \autocite{LIANG2024175689}
                     \label{ndfeb}
                 \end{center}
 
                 \begin{center}
-                    \includegraphics[width=0.5\textwidth]{resources/ndfeb magnetization curve.png}
+                    \includegraphics[width=0.8\textwidth]{resources/sps vs. conventional.png}
                     \\
-                    \textbf{Figure 14: NdFeB Magnetization Curve} \autocite{Ghezelbash2017}
-                    \label{mag curve}
-                \end{center}
-
-                Nd-Fe-B is considered one of the best permanent-magnet materials because its intrinsic crystal chemistry, magnetic properties, and manufacturability align exceptionally well for producing very high-performance magnets. The core reason is the $Nd_2Fe_{14}B$ phase, a stable tetragonal compound that uniquely combines high saturation magnetization, strong magnetocrystalline anisotropy, and a reasonably high Curie temperature \hyperref[anisotropy]{[Figure 12]}. This phase provides a saturation magnetization of 95 emu/g, which is higher than most other rare-earth compound magnets \hyperref[mag curve]{[Figure 14]}. The saturation magnetization is higher than most due to its structure containing alternating Nd-rich layers and Fe-atom sheets that efficiently align and stabilize magnetic moments. Nd contributes large spin-orbit coupling, creating strong anisotropy, while Fe provides high magnetization \autocite{1063214}. 
-
-                \begin{center}
-                    \includegraphics[width=0.6\textwidth]{resources/domain wall pinning.png}
-                    \\
-                    \textbf{Figure 15: Domain Wall Movement (a) and Using Notches to Control Domain Wall Propogation (b)} \autocite{Jin2017}
-                    \label{domain}
-                \end{center}
-
-                \begin{center}
-                    \includegraphics[width=1\textwidth]{resources/sps vs. conventional.png}
-                    \\
-                    \textbf{Figure 16: NdFeB Fracture Surface After Spark Plasma Sintering (a) and After Conventional Powder Metallurgy (b)} \autocite{WANG20141}
+                    \textbf{Figure 13: NdFeB Fracture Surface After Spark Plasma Sintering (a) and After Conventional Powder Metallurgy (b)} \autocite{WANG20141}
                     \label{sps conv}
                 \end{center}
 
-                Microstructurally, Nd-Fe-B magnets benefit from a multi-phase structure created through sintering or poweder metallurgy: a matrix of $Nd_2Fe_{14}B$ grains surrounded by thin Nd-rich grain-boundary phases \hyperref[ndfeb]{[Figure 13]}. These boundary phases help isolate grains magnetically and promote domain-wall pinning, increasing coersive force \hyperref[domain]{[Figure 15]}. Post-sintering heat treatments further enhance coercivity by reducing strain and improving grain-boundary uniformity \hyperref[sps conv]{[Figure 16]}. Nd-Fe-B is also highly tunable. Substituting small amounts of Dy or Tb into the structure can boost coercivity (thanks to their higher anisotropy), while partial Fe-Co substitution increases the Curie temperature and improves thermal stability of magnetization \autocite{1063214}. This makes the material useful for high-temperature applications, though with some coercivity trade-off. 
+                Microstructurally, Nd-Fe-B magnets benefit from a multi-phase structure created through sintering or powder metallurgy: a matrix of $Nd_2Fe_{14}B$ grains surrounded by thin Nd-rich grain-boundary phases \hyperref[ndfeb]{[Figure 12]}. These boundary phases help isolate grains magnetically and promote domain-wall pinning, increasing coercive force. Post-sintering heat treatments further enhance coercivity by reducing strain and improving grain-boundary uniformity \hyperref[sps conv]{[Figure 13]}. Nd-Fe-B is also highly "tunable." Substituting small amounts of Dy or Tb into the structure can boost coercivity (thanks to their higher anisotropy), while partial Fe-Co substitution increases the Curie temperature and improves thermal stability of magnetization \autocite{1063214}. This makes the material useful for high-temperature applications, though with some coercivity trade-off. 
 
-                In short, Nd-Fe-B magnets are so effective because their crystal structure naturally supports strong, directionally stable magnetism, and because metallurgical processing allows engineers to optimize coercivity, thermal stability, and microstructure for demanding modern applications.
+                In short, Nd-Fe-B magnets are effective because their crystal structure naturally supports strong, directionally stable magnetism, and because metallurgical processing allows engineers to optimize coercivity, thermal stability, and microstructure for demanding modern applications.
             
             \subsubsection{Sm-Co}
                 
                 \begin{center}
-                    \includegraphics[width=0.7\textwidth]{resources/smco mag.png}
+                    \includegraphics[width=0.6\textwidth]{resources/smco mag.png}
                     \\
-                    \textbf{Figure 17: $Sm_2Co_{17}$ (S1) and $Sm_2Co_{17}$ with More Fe (S2) Magnetization Curve} \autocite{7114284}
+                    \textbf{Figure 14: $Sm_2Co_{17}$ (S1) and $Sm_2Co_{17}$ with More Fe (S2) Magnetization Curve} \autocite{7114284}
                     \label{smco mag curve}
                 \end{center}
 
-                Sm-Co magnets, particularly the $Sm_2Co_{17}$-type, are highly regarded among rare-earth magnets due to their exceptional magnetic properties, especially their outstanding high-temperature performance and corrosion resistance. The superior coercivity of these magnets originates primarily from domain wall pinning at the $SmCo_5$ cell boundary phase, which can be tuned by controlling Cu and Fe content during processing \hyperref[domain]{[Figure 15]}. The microstructure typically consists of a rhombohedral $Sm_2Co_{17}$ cell phase, hexagonal $SmCo_5$ boundary phase, and Zr-rich plate-like phases \autocite{7114284}. The Cu distribution at the cell boundaries and interfaces reduces the local magnetic anisotrophy, creating energy wells that serve as strong attractive pinning sites for domain walls, thereby enhancing coercivity. Additionally, variations in Fe content influence the saturation magnetization, with higher Fe content increasing the volume fraction of the cell phase and boosting magnetization but reducing coercivity if the Cu-meditated pinning is less effective \hyperref[smco mag curve]{[Figure 17]}. 
+                Sm-Co magnets, particularly the $Sm_2Co_{17}$-type, are highly regarded among rare-earth magnets due to their magnetic properties, especially their high-temperature performance and corrosion resistance. The superior coercivity of these magnets originates primarily from domain wall pinning at the $SmCo_5$ cell boundary phase, which can be tuned by controlling Cu and Fe content during processing. The microstructure typically consists of a rhombohedral $Sm_2Co_{17}$ cell phase, hexagonal $SmCo_5$ boundary phase, and Zr-rich plate-like phases \autocite{7114284}. The Cu distribution at the cell boundaries and interfaces reduces the local magnetic anisotropy, creating energy wells that serve as strong attractive pinning sites for domain walls, which enhances coercivity. Additionally, variations in Fe content influences the saturation magnetization, with higher Fe content increasing the volume fraction of the cell phase and boosting magnetization \hyperref[smco mag curve]{[Figure 14]}. 
 
-                The microstructure is highly stable even at elevated temperatures, enabling reliable operation well above 250-350\textdegree{}C, which is far beyond Nd-Fe-B's practical range. Sm-Co also possesses much higher Curie temperatures (720-860\textdegree{}C compared to ~310-400\textdegree{}C for Nd-Fe-B), giving it unmatched thermal stability among commercial permanent magnets \autocite{SINGH2015300}.
+                The microstructure is highly stable even at elevated temperatures, enabling reliable operation well above 250-350\textdegree{}C, which is far beyond Nd-Fe-B's practical range. Sm-Co also possesses much higher Curie temperatures (720-860\textdegree{}C compared to ~310-400\textdegree{}C for Nd-Fe-B), giving it superior thermal stability compared to commercial permanent magnets \autocite{SINGH2015300}.
 
                 \begin{center}
                     \includegraphics[width=0.85\textwidth]{resources/basal plane fracture.png}
                     \\
-                    \textbf{Figure 18: Sintered $SmCo_5$ Fractographs in Two Loading Directions} \autocite{SINGH2015300}
+                    \textbf{Figure 15: Sintered $SmCo_5$ Fractographs in Two Loading Directions} \autocite{SINGH2015300}
                     \label{smco fract}
                 \end{center}
 
-                The differing appearances in the two loading directions highlight the material's strong crystallographic anisotropy: loading parallel to the basal plane typically produces smoother, mirror-like cleavage, while loading perpendicular results in rougher, faceted features associated with crack deflection at grain boundaries and secondary phases \hyperref[smco fract]{[Figure 18]}.
+                The differing appearances in the two loading directions highlight the material's strong crystallographic anisotropy: Loading parallel to the basal plane typically produces smoother, mirror-like cleavage, while loading perpendicular results in rougher, faceted features associated with crack deflection at grain boundaries and secondary phases \hyperref[smco fract]{[Figure 15]}.
 
-                Mechanically, both Nd-Fe-B and Sm-Co are brittle, but Sm-Co is generally more fracture-prone due to its strongly anisotropic crystal structure \hyperref[anisotropy]{[Figure 12]}. The above fractograph reflects Sm-Co's crystallographic anisotropy and tendency toward cleavage-dominated failure. Nd-Fe-B's fracture surfaces tend to be less anisotropic and are more influenced by grain-boundary phases introduced through sintering. Sm-Co's brittleness complicates machining and limits its use in extremely high-RPM motors unless encapsulated, though its thermal robustness often outweights these drawbacks.
+                Mechanically, both Nd-Fe-B and Sm-Co are brittle, but Sm-Co is generally more fracture-prone due to its strongly anisotropic crystal structure \hyperref[anisotropy]{[Figure 10]}. The above fractograph reflects Sm-Co's crystallographic anisotropy and tendency toward cleavage-dominated failure \hyperref[smco fract]{[Figure 15]}. Nd-Fe-B's fracture surfaces tend to be less anisotropic and are more influenced by grain-boundary phases introduced through sintering. Sm-Co's brittleness complicates machining and limits its use in extremely high-RPM motors unless encapsulated, though its thermal robustness often outweighs these drawbacks.
                 
                 \begin{center}
                     \includegraphics[width=0.75\textwidth]{resources/cost.png}
                     \\
-                    \textbf{Figure 19: Correlation of Crustal Abundance of the Elements and their Cost per Mole (a) and a Cost Periodic Table (b)} \autocite{6008648}
+                    \textbf{Figure 16: Correlation of Crustal Abundance of the Elements and their Cost per Mole (a) and a Cost Periodic Table (b)} \autocite{6008648}
                     \label{cost}
                 \end{center}
 
-                From an application perspective, Nd-Fe-B dominates consumer electronics, EV traction motors, robotics, and most room-temperature industrial systems due to its high energy product and cost efficiency \hyperref[cost]{[Figure 19]}. Sm-Co, while more expensive, is preferred for aerospace, military, high-vacuum, high-radiation, and high-temperature machinery. In summary, Nd-Fe-B offers maximum magnetic strength but limited thermal resilience, whereas Sm-Co provides unmatched temperature stability, corrosion resistance, and magnetic reliability in extreme environments, making the two materials complementary rather than competing solutions within the permanent-magnet landscape.
+                From an application perspective, Nd-Fe-B dominates consumer electronics, EV traction motors, robotics, and most room-temperature industrial systems due to its high energy product and cost efficiency \hyperref[cost]{[Figure 16]}. Sm-Co, while more expensive, is preferred for aerospace, military, high-vacuum, high-radiation, and high-temperature machinery. In summary, Nd-Fe-B offers maximum magnetic strength but limited thermal resilience, whereas Sm-Co provides unmatched temperature stability, corrosion resistance, and magnetic reliability in extreme environments, making the two materials viable options in the permanent-magnet landscape.
 
     \section{Manufacturing of Electric Motors}
-        
-        \begin{center}
-                \includegraphics[width=1\textwidth]{resources/conventional vs hd.png}
-                \\
-                \textbf{Figure 20: Conventional Sintered Process and Hot-Press and Hot-Deformation Process} \autocite{ma16134789}
-                \label{sint vs hddr}
-        \end{center}
-
-        \begin{center}
-                \includegraphics[width=1\textwidth]{resources/mfg effects.png}
-                \\
-                \textbf{Figure 21: Coercivity vs. Grain Size (a), Typical Microstructural Features of Sintered Nd-Fe-B Magnets (b), HDDR Nd-Fe-B Powders (c), and Melt-Spun Nd-Fe-B Ribbons (d)} \autocite{ma16134789}
-                \label{coerc vs grains}
-        \end{center}
 
         \subsection{Effects of Hot Deformation}
             
             \begin{center}
-                \includegraphics[width=0.85\textwidth]{resources/mfg process.png}
+                \includegraphics[width=0.7\textwidth]{resources/mfg process.png}
                 \\
-                \textbf{Figure 22: Production Process of Radially Oriented Ring Magnet and Axially Oriented Plate Magnet} \autocite{ma16196581}
+                \textbf{Figure 17: Production Process of Radially Oriented Ring Magnet and Axially Oriented Plate Magnet} \autocite{ma16196581}
                 \label{mfg}
             \end{center}
 
-            Hot-deformed Nd-Fe-B magnets are produced by melt-spinning nanocrystalline ribbons, pulverizing them into powder, hot-pressing to full density, and then hot-deforming to indice strong crystallographic texture and platelet grain orientation, yielding a fine-grained, high-performance magnet whose microstructure and domain behavior are controlled by temperature, composition, and grain-boundary engineering \hyperref[mfg]{[Figure 22]}. 
+            Hot-deformed Nd-Fe-B magnets are produced by melt-spinning nanocrystalline ribbons, pulverizing them into powder, hot-pressing to full density, and then hot-deforming to indice strong crystallographic texture and platelet grain orientation. This yields a fine-grained, high-performance magnet with a microstructure and domain behavior that is controlled by temperature, composition, and grain-boundary engineering \hyperref[mfg]{[Figure 17]}. 
 
-            Hot deformation dramatically reshapes the grain structure and microstructure of Nd-Fe-B magnets, transforming them from an initially random, nanocrystalline state into a highly textured and anisotropic final structure. The process begins with melt spinning, which produces extremely fine 10-30nm $Nd_2Fe_{14}B$ grains that are randomly oriented due to rapid quenching. Pulverizing these ribbons into powder preserves this nanocrystalline structure while ensuring a slight excess of Nd-rich phases that will later form a liquid grain boundary. During hot pressing, the powder densifies fully and the grains coarsen slightly to about 20-50nm, but the compact remains isotropic; the Nd-rich liquid phase distributes into a continuous grain boundary network that is essential for later grain movement. The most significant microstructural changes occur during hot deformation, where mechanical strain combined with the softened boundary phase allows grains to rotate, slide, and elongate. As a result, the originally equiaxed nanograins transform into plate-like grains with large aspect ratios. Typically, the ratios lie between 200-500nm laterally and 20-50nm thick \autocite{ma16196581}. These platelets develop strong crystallographic texture as their c-axes align along the compression direction. The grain boundary phase also reorganizes, forming thin, well-connected layers that promote domain-wall pinning \hyperref[domain]{[Figure 15]}. When properly controlled, the deformation step maintains the nanoscale grain size, preventing abnormal grain growth while enhancing alignment. The final microstructure therefore consists of highly oriented, plate-like $Nd_2Fe_{14}B$ grains embedded in a continuous Nd-rich boundary network, producing a magnet with strong anisotropy, high remanence, and improved coercivity compared to conventional sintered magnets.
-
-            Sintered Nd-Fe-B magnets dominate the market due to their mature manufacturing processes and excellent performance, though they require significant amounts of expensive heavy rare-earth (HRE) elements, such as dysprosium or terbium, to maintain coercivity at elevated temperatures above 150\textdegree{}C. 
+            Hot deformation dramatically reshapes the grain structure and microstructure of Nd-Fe-B magnets, transforming them from an initially random, nanocrystalline state into a highly textured and anisotropic final structure. The process begins with melt spinning, which produces extremely fine 10-30nm $Nd_2Fe_{14}B$ grains that are randomly oriented due to rapid quenching. Pulverizing these ribbons into powder preserves this nanocrystalline structure while ensuring a slight excess of Nd-rich phases that will later form a liquid grain boundary. During hot pressing, the powder densifies fully and the grains coarsen to about 20-50nm, but the compact remains isotropic. The Nd-rich liquid phase distributes into a continuous grain boundary network that is essential for later grain movement. The most significant microstructural changes occur during hot deformation, where mechanical strain combined with the softened boundary phase allows grains to rotate, slide, and elongate. As a result, the originally equiaxed nanograins transform into plate-like grains. Typically, the grain aspect ratios lie between 200-500nm laterally and 20-50nm thick \autocite{ma16196581}. These platelets develop a strong crystallographic texture as their c-axes align along the compression direction. The grain boundary phase also reorganizes, forming thin, well-connected layers that promote domain-wall pinning. When properly controlled, the deformation step holds the nanoscale grain size, preventing abnormal grain growth while enhancing alignment. The final microstructure therefore consists of highly oriented, plate-like $Nd_2Fe_{14}B$ grains embedded in a continuous Nd-rich boundary network, producing a magnet with strong anisotropy, high remanence, and improved coercivity compared to conventional sintered magnets.
         
         \subsection{Effects of Sintering}
 
-            Sintered Nd-Fe-B magnets are produced from rare-earth (RE) metals, iron, cobalt, ferro-boron, and recycled alloy, starting with vacuum or argon induction melting to minimize oxygen contamination \autocite{Cui2022}. The microstructure of the cast alloy is critical, as the main magnetic phase, $Nd_2Fe_{14}B$, forms via a peritectic reaction with c-Fe. Slow cooling can leave soft, ductile a-Fe and secondary phases, reducing magnetic performance and complicating powder production. Rapid cooling via strip casting suppresses a-Fe formation, produces thin sheets (<1mm), and enables higher remanence.
+            Sintered Nd-Fe-B magnets are produced from rare-earth (RE) metals such as iron, cobalt, ferro-boron, and recycled alloy, starting with vacuum or argon induction melting to minimize oxygen contamination \autocite{Cui2022}. The microstructure of the cast alloy is critical, as the main magnetic phase, $Nd_2Fe_{14}B$, forms via a peritectic reaction with c-Fe. Slow cooling can leave soft, ductile a-Fe and secondary phases, reducing magnetic performance and complicating powder production \autocite{Cui2022}. Rapid cooling via strip casting suppresses a-Fe formation, produces thin sheets ($<$1mm), and enables higher remanence.
 
-            The strip-cast flakes undergo hydrogen decrepitation, creating microcracks that embrittle the material, followed by jet milling to produce a signle-crystal powder (about 5µm) with uniform particle size. The powder is pressed under a magnetic field, aligning grains for anisotropic properties.
+            \begin{center}
+                \includegraphics[width=0.7\textwidth]{resources/conventional vs hd.png}
+                \\
+                \textbf{Figure 18: Conventional Sintered Process and Hot-Press and Hot-Deformation Process} \autocite{ma16134789}
+                \label{sint vs hddr}
+        \end{center}
 
-            Sintering occurs under vacuum or inert gas, densifying the magnet (>98\% theoretical density) while controlling grain growth. Subsequent isothermal heat treatment optimizes coercivity and B-H loop shape. Pressed magnets shrink anisotropically (7-25\%), necessitating machining (wire EDM, grinding, or vibratory honing) to achieve precise dimensions and reduce chipping \autocite{Cui2022}.
+        \begin{center}
+                \includegraphics[width=0.7\textwidth]{resources/mfg effects.png}
+                \\
+                \textbf{Figure 19: Coercivity vs. Grain Size (a), Typical Microstructural Features of Sintered Nd-Fe-B Magnets (b), HDDR Nd-Fe-B Powders (c), and Melt-Spun Nd-Fe-B Ribbons (d)} \autocite{ma16134789}
+                \label{coerc vs grains}
+        \end{center}
 
-            Nd-Fe-B magnets require thin corrosion-resistant coatings to prevent degredation, and are magnetized post-processing. To improve high-temperature performance, heavy rare-earth (Dy, Tb) diffusion or additions are used to maintain coercivity above 150\textdegree{}C.
+            The strip-cast flakes undergo hydrogen decrepitation, creating microcracks that embrittle the material, followed by jet milling to produce a signle-crystal powder (about 5\textmu{}m) with uniform particle size \hyperref[coerc vs grains]{[Figure 19]}. The powder is pressed under a magnetic field, aligning grains for anisotropic properties \hyperref[sint vs hddr]{[Figure 18]}.
+
+            Sintering occurs under vacuum or inert gas, densifying the magnet ($>$98\% theoretical density) while controlling grain growth. Post-isothermal heat treatment optimizes coercivity and B-H loop shape. Pressed magnets shrink anisotropically (7-25\%), which requires machining (wire EDM, grinding, or vibratory honing) to achieve precise dimensions and reduce chipping \autocite{Cui2022}.
+
+            Nd-Fe-B magnets require thin corrosion-resistant coatings to prevent degradation, and are magnetized post-processing. To improve high-temperature performance, heavy rare-earth (Dy, Tb) diffusion or additions are used to maintain coercivity above 150\textdegree{}C.
+
+            Sintered Nd-Fe-B magnets dominate the market due to their mature manufacturing processes and excellent performance, though they require significant amounts of expensive heavy rare-earth (HRE) elements, such as dysprosium or terbium, to maintain coercivity at elevated temperatures above 150\textdegree{}C. 
 
     \section{Conclusion}
         
-        Electric motors rely critically on the selection of materials and the precision of manufacturing processes to achieve high performance, efficiency, and reliability. Permanent magnets, particularly Nd-Fe-B and Sm-Co, play a central role in enhancing motor power density and torque characteristics due to their strong magnetic properties. Nd-Fe-B magnets offer high remanence and energy density but require careful microstructural control through processes such as strip casting, hydrogen decrepitation, sintering, and heat treatment to optimize coercivity and alignment. Sm-Co magnets, while less sensitive to temperature, provide excellent thermal stability and corrosion resistance.
+        Electric motors rely on the selection of materials and the precision of manufacturing processes to achieve high performance, efficiency, and reliability. Permanent magnets, particularly Nd-Fe-B and Sm-Co, play a central role in enhancing motor power density and torque characteristics due to their strong magnetic properties. Nd-Fe-B magnets offer high remanence and energy density but require careful microstructural control through processes such as strip casting, hydrogen decrepitation, sintering, and heat treatment to optimize coercivity and alignment. Sm-Co magnets, while less sensitive to temperature, provide excellent thermal stability and corrosion resistance.
 
-        Manufacturing techniques, including hot deformation for Nd-Fe-B and sintering for both magnet types, directly influence grain orientation, texture, and the formation of grain-boundary phases, which in turn determine magnetic performance. Additionally, machining, coating, and magnetization steps are critical for producing magnets suitable for practical applications across industries ranging from automotive to renewable energy. 
+        Manufacturing techniques, including hot deformation for Nd-Fe-B and sintering for both magnet types, directly influence grain orientation, texture, and the formation of grain-boundary phases, which in turn determine magnetic performance. The extra machining, coating, and magnetization steps are critical for producing magnets suitable for practical applications across industries ranging from automotive to renewable energy. 
 
-        Overall, the combination of advanced materials, microstructural engineering, and precise manufacturing processes enables electric motors to meet increasingly demanding performance requirements, supporting the growing adoption of electrification in modern technology.
+        Overall, the combination of advanced materials, microstructural engineering, and precise manufacturing processes enable electric motors to meet increasingly demanding performance requirements, supporting the evolution of electrification in modern technology.
 
 
     % % % % % % % % %
